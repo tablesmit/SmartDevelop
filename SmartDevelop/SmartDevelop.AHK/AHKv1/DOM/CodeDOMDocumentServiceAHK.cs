@@ -280,7 +280,7 @@ namespace SmartDevelop.Model.DOM
         
         public override async Task CompileTokenFileAsync() {
 
-            await TaskEx.Run(() => {
+            await Task.Run(() => {
 
                 if(IsBusy) {
                     _cts.Cancel();
@@ -321,7 +321,7 @@ namespace SmartDevelop.Model.DOM
 
         protected async Task CompileTokenFile(CancellationToken cancellationToken) {
             try {
-                await TaskEx.Run(() => {
+                await Task.Run(() => {
                     _languageRoot = new CodeTypeDeclarationRoot() { Project = _document.Project };
                     CodeTypeDeclarationEx initialparent = _languageRoot;
 

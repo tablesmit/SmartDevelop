@@ -112,7 +112,7 @@ namespace SmartDevelop.AHK.AHKv1.CodeCompletion
                 return;
             }
 
-            TaskEx.Run(() => HandleCompletionEvent(currentChar, segment, e));
+            Task.Run(() => HandleCompletionEvent(currentChar, segment, e));
         }
 
 

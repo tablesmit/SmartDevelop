@@ -363,7 +363,7 @@ namespace SmartDevelop.ViewModel.DocumentFiles
             char typedChar;
             typedChar = e.Text[0];
             if(invokeCompletionTriggers.Contains(typedChar)) {
-                TaskEx.Run(()=>HandleMethodInvokeIntellisense());
+                Task.Run(()=>HandleMethodInvokeIntellisense());
             }
         }
 

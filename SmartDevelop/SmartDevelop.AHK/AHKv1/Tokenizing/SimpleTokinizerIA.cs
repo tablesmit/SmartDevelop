@@ -161,8 +161,7 @@ namespace SmartDevelop.AHK.AHKv1.Tokenizing
                 _waitinginQueue = true;
             }
 
-            await TaskEx.Run(() => {
-
+            await Task.Run(() => {
                 if(IsBusy) {
                     _cts.Cancel();
                     while(IsBusy)
@@ -265,7 +264,7 @@ namespace SmartDevelop.AHK.AHKv1.Tokenizing
 
             #region await the tokenizer task
 
-            await TaskEx.Run(() => {
+            await Task.Run(() => {
 
                 _currentToken = Token.Unknown;
 
